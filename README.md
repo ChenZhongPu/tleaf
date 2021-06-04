@@ -20,15 +20,13 @@ WebContext wx = ...;
 TemplateUtils.process("template_name", wx);
 ```
 
-Alternatively, the template name can be also specified by an `annotation`.
+Alternatively, the template name can be also specified by an `annotation` when there is only one possible template for a given servlet.
 
 ```java
 @Leaf("template_name")
-protected void doGet(...) {
-    WebContext wx = ...;
-    TemplateUtils.process(wx);
-}
+public class YourServlet extends HttpServlet {}
 ```
+And then you can use `TemplateUtils.process("template_name")`.
 
 Example project can be found at [java-ee-swufe: thymeleaf](https://github.com/ChenZhongPu/java-ee-swufe/tree/master/06_more_jsp/thymeleaf).
 
