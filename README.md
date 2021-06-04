@@ -10,14 +10,24 @@ Firstly, add `Maven` dependency:
 <dependency>
     <groupId>info.zhongpu</groupId>
     <artifactId>tleaf</artifactId>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
 </dependency>
 ```
-All template files must be put under `webapp/WEB-INF/templates`.
+All template files (`.html`) must be put under `webapp/WEB-INF/templates`.
 
 ```java
-WebContext wx = ...
+WebContext wx = ...;
 TemplateUtils.process("template_name", wx);
+```
+
+Alternatively, the template name can be also specified by an `annotation`.
+
+```java
+@Leaf("template_name")
+protected void doGet(...) {
+    WebContext wx = ...;
+    TemplateUtils.process(wx);
+}
 ```
 
 Example project can be found at [java-ee-swufe: thymeleaf](https://github.com/ChenZhongPu/java-ee-swufe/tree/master/06_more_jsp/thymeleaf).

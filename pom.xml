@@ -6,7 +6,7 @@
 
     <groupId>info.zhongpu</groupId>
     <artifactId>tleaf</artifactId>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
 
     <name>simple-tleaf</name>
     <description>A Simple Util For Thymeleaf</description>
@@ -14,7 +14,7 @@
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
     <developers>
@@ -30,8 +30,8 @@
     </scm>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>9</maven.compiler.source>
+        <maven.compiler.target>9</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
@@ -116,7 +116,6 @@
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 

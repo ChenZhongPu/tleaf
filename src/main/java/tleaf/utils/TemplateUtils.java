@@ -9,6 +9,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.lang.reflect.Method;
 
 public class TemplateUtils {
     private static TemplateEngine templateEngine;
@@ -50,5 +51,23 @@ public class TemplateUtils {
             }
             throw new ServletException(e);
         }
+    }
+
+    /**
+     * The template name is given in annotation
+     * @param webContext
+     * @throws ServletException
+     */
+    public static void process(WebContext webContext) throws ServletException {
+        StackWalker walker = StackWalker.getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE);
+        Method[] methods = walker.getCallerClass().getMethods();
+        String path = "";
+        for (Method m : methods) {
+            if (m.isAnnotationPresent(Leaf.class)) {
+                Leaf leaf = m.getAnnotation(Leaf.class);
+                path = leaf.value();
+            }
+        }
+        process(path, webContext);
     }
 }
