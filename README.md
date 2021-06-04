@@ -20,7 +20,7 @@ WebContext wx = ...
 TemplateUtils.process("template_name", wx);
 ```
 
-Example project can be found [java-ee-swufe: thymeleaf]().
+Example project can be found at [java-ee-swufe: thymeleaf](https://github.com/ChenZhongPu/java-ee-swufe/tree/master/06_more_jsp/thymeleaf).
 
 ## To do
 More flexible configurations will also be provided.
