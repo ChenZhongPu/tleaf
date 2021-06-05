@@ -10,7 +10,7 @@ Firstly, add `Maven` dependency:
 <dependency>
     <groupId>info.zhongpu</groupId>
     <artifactId>tleaf</artifactId>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
 </dependency>
 ```
 All template files (`.html`) must be put under `webapp/WEB-INF/templates`.
@@ -26,7 +26,7 @@ Alternatively, the template name can be also specified by an `annotation` when t
 @Leaf("template_name")
 public class YourServlet extends HttpServlet {}
 ```
-And then you can use `TemplateUtils.process("template_name")`.
+And then you can use `TemplateUtils.process(wx)`.
 
 Example project can be found at [java-ee-swufe: thymeleaf](https://github.com/ChenZhongPu/java-ee-swufe/tree/master/06_more_jsp/thymeleaf).
 
